@@ -27,10 +27,10 @@ const faqs = [
 const FAQs: FC = () => {
   return <section className="section" id="faqs">
     <div className="container">
-      <h2 className="text-4xl md:text-7xl">FAQs</h2>
-      <div className="mt-10 md:mt-16">
+      <h2 className="text-4xl md:text-5xl">FAQs</h2>
+      <div className="mt-10 md:mt-14 lg:mt-16">
         {faqs.map(({ question, answer }) => (
-          <div key={question} className="border-t last:border-b py-6 md:py-8 lg:py-10 border-stone-400 border-dotted">
+          <div key={question} className="border-t last:border-b py-3 md:py-5 lg:py-7 border-stone-400 border-dotted">
             <div className="flex items-center justify-between gap-4">
               <h3 className="text-2xl md:text-3xl lg:text-4xl">{question}</h3>
               <div className="inline-flex items-center justify-center size-11 rounded-full border border-stone-400 shrink-0">

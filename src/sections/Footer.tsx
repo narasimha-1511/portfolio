@@ -1,26 +1,37 @@
+'use client';
 import Button from "@/components/Button";
 import { FC } from "react";
 
 const navItems = [
   {
-    href: '#',
+    href: '#intro',
     label: 'Home'
   },{
-    href: '#',
+    href: '#projects',
     label: 'Projects'
   },{
-    href: '#',
+    href: '#testimonials',
     label: 'Testimonials'
   },{
-    href: '#',
+    href: '#faqs',
     label: 'Faqs'
   },{
-    href: '#',
+    href: '#contact',
     label: 'Contact'
   },
 ]
 
 const Footer: FC = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const hash = e.currentTarget.getAttribute('href');
+
+    const targetElement = document.querySelector(hash!);
+
+    if(!targetElement) return;
+
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  };
   return <footer className="bg-stone-900 text-white" id="contact">
     <div className="container">
       <div className="section">
@@ -43,7 +54,7 @@ const Footer: FC = () => {
             <nav className="flex flex-col gap-8 mt-16 uppercase md:items-end md:mt-0">
               {navItems.map(({href , label}) => {
                 return (
-                  <a href={href} key={label}>
+                  <a href={href} key={label} onClick={handleClick}>
                     <Button variant="text">
                       {label}
                     </Button>

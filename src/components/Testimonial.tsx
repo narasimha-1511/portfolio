@@ -9,8 +9,8 @@ type TestimonialProps = {
   company: string;
   role: string;
   quote: string;
-  image: string | StaticImport;
-  imagePositionY: number;
+  image?: string | StaticImport;
+  imagePositionY?: number;
   className?: string;
   isActive?: boolean;
 } & HTMLAttributes<HTMLDivElement>
@@ -33,7 +33,7 @@ const Testimonial: FC<TestimonialProps> = ({ name, company, role, quote, image, 
                 transition={{ duration: 0.2, delay: 0.02 * index }}
                 className="inline-block"
               >
-                {index === 0 ? <>&ldquo;{word}</> : index === quote.split(" ").length - 1 ? <>{word}&rdquo;</> : word}{" "}
+                {index === 0 ? <>&ldquo;{word}</> : index === quote.split(" ").length - 1 ? <>{word}&rdquo;</> : word}&nbsp;
               </motion.span>
             ))}
           </div>
