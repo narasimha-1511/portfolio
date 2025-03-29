@@ -30,7 +30,7 @@ const Footer: FC = () => {
         </div>
         <div className="grid md:grid-cols-3 md:items-center">
           <div className="md:col-span-2">
-            <h2 className="mt-8 text-4xl md:text-7xl lg:text-8xl font-extralight">Enough talk Let's make something great together.</h2>
+            <h2 className="mt-8 text-4xl md:text-7xl font-extralight">Enough talk Let's make something great together.</h2>
             <Button variant="secondary" 
             className="mt-8"
             iconAfter={
@@ -54,7 +54,7 @@ const Footer: FC = () => {
           </div>
         </div>
       </div>
-      <p className="py-16 text-white/30 text-sm md:text-lg">Copyright &copy; Narasimha S &bull; All rights reserved</p>
+      <p className="py-2 text-white/30 text-sm md:text-lg">Copyright &copy; Narasimha S &bull; All rights reserved</p>
     </div>
   </footer>;
 };

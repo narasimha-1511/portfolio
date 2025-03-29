@@ -33,7 +33,7 @@ const projects = [
 const Projects: FC = () => {
   return <section className="section" id="projects">
     <div className="container">
-      <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected Projects</h2>
+      <h2 className="text-4xl md:text-7xl">Selected Projects</h2>
       <div className="mt-10 md:mt-16 lg:mt-20">
         {projects.map(({ name , image }) => (
           <a key={name} href="#" className="border-t last:border-b py-6 md:py-8 lg:py-10 border-stone-400 border-dotted flex flex-col relative group/project">
