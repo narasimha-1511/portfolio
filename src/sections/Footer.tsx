@@ -1,6 +1,7 @@
 'use client';
 import Button from "@/components/Button";
 import { FC } from "react";
+import { useTextRevealAnimations } from "@/hooks/useTextRevealAnimations";
 
 const navItems = [
   {
@@ -22,6 +23,10 @@ const navItems = [
 ]
 
 const Footer: FC = () => {
+
+  const {textRevealAnimations} = useTextRevealAnimations();
+
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const hash = e.currentTarget.getAttribute('href');
